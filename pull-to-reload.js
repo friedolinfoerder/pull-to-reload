@@ -153,9 +153,7 @@ var PullToReload = function (optsUser) {
 		}
 
         // Update
-		if (newMargin <= self.opts.threshold) {
-			self.isThresholdReached = true;
-		}
+		self.isThresholdReached = (newMargin <= self.opts.threshold);
 
 		self.ptr.style.marginTop = '-' + (newMargin + 'px');
 
